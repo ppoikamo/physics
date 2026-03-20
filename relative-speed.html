@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>物理基礎 | 相対速度の問題</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="relative-speed">
+  <div class="page">
+    <div class="top-bar">
+      <h2 class="main-title">相対速度の問題</h2>
+      <div class="top-actions">
+        <button onclick="goMenu()">メニューへ戻る</button>
+        <button onclick="logout()">ログアウト</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div id="questions"></div>
+      <div class="button-row">
+        <button id="submitBtn" onclick="submitAnswers()">解答する</button>
+        <button id="nextBtn" class="hidden" onclick="nextQuestion()">次の問題へ</button>
+      </div>
+    </div>
+
+    <div class="panel-grid">
+      <div id="userStats" class="summary-box hidden">
+        <h3>自分の記録</h3>
+        <p>最高得点: <span id="bestScore">0</span>/5</p>
+        <p>最高正答率: <span id="rate">0</span>%</p>
+      </div>
+
+      <div id="publicUsersPanel" class="public-box hidden">
+        <h3>全ユーザー一覧</h3>
+        <ul id="publicAllUsers"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

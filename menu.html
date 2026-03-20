@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>物理基礎 | メニュー</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="top-bar">
+      <h2 class="main-title">物理基礎 メニュー</h2>
+      <button onclick="logout()">ログアウト</button>
+    </div>
+
+    <div class="card menu-card">
+      <h3>問題ページを選んでください</h3>
+      <div class="menu-grid">
+        <a class="menu-button" href="speed.html">速度の問題</a>
+        <a class="menu-button" href="acceleration.html">加速度の問題</a>
+        <a class="menu-button" href="relative-speed.html">相対速度の問題</a>
+      </div>
+    </div>
+
+    <div class="panel-grid">
+      <div id="userStats" class="summary-box hidden">
+        <h3>自分の記録</h3>
+        <p>最高得点: <span id="bestScore">0</span>/5</p>
+        <p>最高正答率: <span id="rate">0</span>%</p>
+      </div>
+
+      <div id="publicUsersPanel" class="public-box hidden">
+        <h3>全ユーザー一覧</h3>
+        <ul id="publicAllUsers"></ul>
+      </div>
+    </div>
+
+    <div id="publicRegisterPanel" class="card hidden">
+      <div class="admin-box">
+        <h3>新規ユーザー登録</h3>
+        <div class="field">
+          <label class="label" for="newUserId">新しいID</label>
+          <input type="text" id="newUserId" placeholder="例: tanaka">
+        </div>
+        <div class="field">
+          <label class="label" for="newUserPass">新しいパスワード</label>
+          <input type="password" id="newUserPass" placeholder="例: 1234">
+        </div>
+        <button onclick="registerUser()">登録する</button>
+      </div>
+    </div>
+
+    <div id="adminPanel" class="hidden card">
+      <div class="button-row">
+        <button onclick="resetAllHistory()">全ユーザー履歴リセット</button>
+      </div>
+
+      <div class="admin-box">
+        <h3>ユーザー登録</h3>
+        <div class="field">
+          <label class="label" for="newUserId">新しいID</label>
+          <input type="text" id="newUserId" placeholder="例: tanaka">
+        </div>
+        <div class="field">
+          <label class="label" for="newUserPass">新しいパスワード</label>
+          <input type="password" id="newUserPass" placeholder="例: 1234">
+        </div>
+        <button onclick="registerUser()">登録する</button>
+      </div>
+
+      <h3>履歴一覧（自分）</h3>
+      <ul id="history"></ul>
+
+      <h3>全ユーザー一覧</h3>
+      <ul id="allUsers"></ul>
+
+      <h3>全ユーザー回答履歴（時間）</h3>
+      <ul id="globalHistory"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
