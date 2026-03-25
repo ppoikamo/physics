@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高校認定問題 | support管理</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="top-bar">
+      <h2 class="main-title">support 管理ページ</h2>
+      <button onclick="logout()">ログアウト</button>
+    </div>
+
+    <div class="card">
+      <div class="admin-box">
+        <h3>ユーザー登録</h3>
+        <div class="field">
+          <label class="label" for="newUserId">新しいID</label>
+          <input type="text" id="newUserId" placeholder="例: tanaka">
+        </div>
+        <button onclick="registerUser()">登録する</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>ユーザー一覧</h3>
+      <ul id="supportUsers"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

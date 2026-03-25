@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>物理基礎 | ログイン</title>
+  <title>高校認定問題 | ログイン</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="page">
-    <div id="login" class="login-box">
-      <div class="login-title">物理基礎</div>
+    <div class="login-box">
+      <div class="login-title">高校認定問題</div>
 
       <div class="field">
         <label class="label" for="id">ID</label>
-        <input type="text" id="id" autocomplete="username">
+        <input type="text" id="id" placeholder="IDを入力">
       </div>
 
-      <div class="field">
-        <label class="label" for="pass">Password</label>
-        <input type="password" id="pass" autocomplete="current-password">
-      </div>
-
-      <button onclick="login('menu.html')">ログイン</button>
+      <button onclick="login()">ログイン</button>
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
